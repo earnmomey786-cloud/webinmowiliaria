@@ -5,7 +5,7 @@ const nextConfig = {
    },
    // image optimization
    images: {
-      domains: ['placehold.it', 'via.placeholder.com'],
+      domains: ['placehold.co', 'via.placeholder.com'],
    },
 }
 

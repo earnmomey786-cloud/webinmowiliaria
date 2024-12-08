@@ -17,7 +17,7 @@ const PostOverlayCard = () => {
                width="1216"
                height="450"
                alt={`banner_image`}
-               src="https://placehold.it/1216x450"
+               src="https://placehold.co/1216x450"
                className="rounded-xl"
             />
          </figure>
@@ -38,7 +38,7 @@ const PostOverlayCard = () => {
                <div className=" flex items-center gap-3">
                   <div className="avatar">
                      <div className="w-9 rounded-full">
-                        <img src="https://placehold.it/100x100" alt="avatar" />
+                        <img src="https://placehold.co/100x100" alt="avatar" />
                      </div>
                   </div>
                   <h5>

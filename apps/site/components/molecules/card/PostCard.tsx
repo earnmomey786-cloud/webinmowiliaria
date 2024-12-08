@@ -14,7 +14,7 @@ const PostCard = () => {
       <div className="card w-fit p-4 border border-base-content/10 rounded-xl font-work">
          <figure>
             <img
-               src="https://placehold.it/360x240"
+               src="https://placehold.co/360x240"
                alt="email"
                className={`rounded-xl`}
                width={360}
@@ -38,7 +38,7 @@ const PostCard = () => {
                <div className=" flex items-center gap-3">
                   <div className="avatar">
                      <div className="w-9 rounded-full">
-                        <img src="https://placehold.it/100x100" alt="avatar" />
+                        <img src="https://placehold.co/100x100" alt="avatar" />
                      </div>
                   </div>
                   <h5>
