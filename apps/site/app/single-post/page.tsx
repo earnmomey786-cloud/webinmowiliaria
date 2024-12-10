@@ -22,7 +22,7 @@ const SinglePost = () => {
                         <div className="avatar">
                            <div className="w-9 rounded-full">
                               <img
-                                 src="https://placehold.it/100x100"
+                                 src="https://placehold.co/100x100"
                                  alt="avatar"
                               />
                            </div>
@@ -43,7 +43,7 @@ const SinglePost = () => {
                      height="462"
                      alt={`blog_image`}
                      className={`rounded-xl`}
-                     src="https://placehold.it/800x462"
+                     src="https://placehold.co/800x462"
                   />
                </div>
 
@@ -115,7 +115,7 @@ const SinglePost = () => {
                         height="462"
                         alt={`blog_image`}
                         className={`rounded-xl`}
-                        src="https://placehold.it/800x462"
+                        src="https://placehold.co/800x462"
                      />
                   </div>
                   <div className="flex items-center justify-center my-8 font-work">

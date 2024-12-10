@@ -16,7 +16,7 @@ const BannerCard = () => {
             width="1216"
             height="600"
             alt={`banner_image`}
-            src="https://placehold.it/1216x600"
+            src="https://placehold.co/1216x600"
             className="rounded-xl"
          />
          <div className="absolute -bottom-16 left-4 md:left-14 rounded-xl p-4 md:p-10 bg-base-100 w-10/12 md:w-7/12 lg:w-6/12 shadow-[0_12px_24px_-6px] shadow-base-content/20">
@@ -36,7 +36,7 @@ const BannerCard = () => {
                <div className=" flex items-center gap-3">
                   <div className="avatar">
                      <div className="w-9 rounded-full">
-                        <img src="https://placehold.it/100x100" alt="avatar" />
+                        <img src="https://placehold.co/100x100" alt="avatar" />
                      </div>
                   </div>
                   <h6>

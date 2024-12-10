@@ -16,7 +16,7 @@ const AuthorInfo = () => {
             <div className="avatar">
                <div className="w-16 rounded-full">
                   <img
-                     src="https://placehold.it/100x100"
+                     src="https://placehold.co/100x100"
                      width={64}
                      height={64}
                      alt="avatar_image"
