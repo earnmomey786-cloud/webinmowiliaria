@@ -152,10 +152,67 @@ Praca zdalna może być bardzo efektywna, jeśli zastosujemy odpowiednie strateg
     }
     console.log('Posts insertados:', posts.length)
     
+    // Agregar post adicional de Natalia sobre AI
+    console.log('Agregando post de Natalia sobre AI...')
+    const aiPostContent = `
+# Sztuczna Inteligencja w 2025: Jak AI Rewolucjonizuje Naszą Codzienność
+
+Żyjemy w fascynujących czasach, kiedy sztuczna inteligencja przestaje być fantastyką naukową, a staje się integralną częścią naszego codziennego życia. W 2025 roku widzimy, jak AI transformuje każdą sferę naszej egzystencji.
+
+## Asystenci AI w Domu
+
+Współczesne domy stają się coraz bardziej inteligentne. Systemy AI uczą się naszych nawyków, optymalizując zużycie energii i tworząc idealne warunki do życia. Wyobraź sobie dom, który wie, kiedy wracasz z pracy i automatycznie przygotowuje idealne oświetlenie i temperaturę.
+
+## Medycyna Personalizowana
+
+AI rewolucjonizuje także medycynę. Algorytmy potrafią analizować obrazy medyczne z dokładnością przewyższającą lekarzy, a systemy diagnostyczne pomagają w early detection chorób nowotworowych.
+
+## Edukacja Przyszłości
+
+W edukacji AI tworzy spersonalizowane ścieżki nauki, dostosowując tempo i metodę do indywidualnych potrzeb każdego ucznia. To oznacza koniec uniwersalnego podejścia "jeden rozmiar dla wszystkich".
+
+## Wyzwania Etyczne
+
+Oczywiście, rozwój AI niesie ze sobą także wyzwania. Musimy zadbać o prywatność danych, transparentność algorytmów i sprawiedliwy dostęp do technologii.
+
+## Przyszłość Jest Teraz
+
+Nie czekajmy na przyszłość - ona już się dzieje. Kluczem jest mądre wykorzystanie możliwości AI, zachowując ludzki element w centrum wszystkich rozwiązań.
+
+*Co myślisz o roli AI w Twoim życiu? Podziel się swoimi przemyśleniami w komentarzach!*
+    `.trim()
+
+    const { data: aiPost, error: aiPostError } = await supabase
+      .from('posts')
+      .insert([
+        {
+          title: 'Sztuczna Inteligencja w 2025: Jak AI Rewolucjonizuje Naszą Codzienność',
+          slug: 'sztuczna-inteligencja-w-2025-jak-ai-rewolucjonizuje-nasza-codziennosc',
+          excerpt: 'Odkryj, jak sztuczna inteligencja zmienia nasze życie w 2025 roku. Od inteligentnych domów po spersonalizowaną medycynę - przyszłość już jest tutaj.',
+          content: aiPostContent,
+          image_url: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=600&fit=crop',
+          author_id: 1, // Natalia Sikora
+          category_id: 1, // Technologia
+          published: true,
+          meta_title: 'AI w 2025: Rewolucja Sztucznej Inteligencji | MetaBlog',
+          meta_description: 'Kompletny przewodnik po zastosowaniach AI w 2025 roku. Dowiedz się, jak sztuczna inteligencja zmienia medycynę, edukację i nasze domy.',
+          tags: ['AI', 'Sztuczna Inteligencja', 'Technologia', 'Przyszłość', 'Innowacje'],
+          reading_time: 4,
+          views: 0
+        }
+      ])
+      .select()
+    
+    if (aiPostError) {
+      console.error('Error agregando post de AI:', aiPostError)
+    } else {
+      console.log('✅ Post de AI creado exitosamente!')
+    }
+    
     console.log('✅ Base de datos inicializada correctamente!')
     console.log(`📝 ${categories.length} categorías creadas`)
     console.log(`👤 ${authors.length} autores creados`)
-    console.log(`📰 ${posts.length} posts creados`)
+    console.log(`📰 ${posts.length + 1} posts creados`)
     
   } catch (error) {
     console.error('Error general:', error)
