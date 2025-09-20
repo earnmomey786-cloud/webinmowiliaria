@@ -3,6 +3,7 @@ import BannerCard from '@/components/molecules/card/BannerCard'
 import PostCard from '@/components/molecules/card/PostCard'
 import { OrganizationSchema, BlogSchema } from '@/components/seo/StructuredData'
 import { generateSocialMeta } from '@/lib/social-meta'
+import { getRecentPosts } from '@/lib/posts'
 import Link from 'next/link'
 
 export const metadata = {
@@ -16,7 +17,10 @@ export const metadata = {
    })
 }
 
-export default function Home() {
+export default async function Home() {
+   // Cargar posts recientes desde Supabase
+   const recentPosts = await getRecentPosts(9)
+
    return (
       <>
          <OrganizationSchema 
@@ -48,8 +52,11 @@ export default function Home() {
                Najnowsze Artykuły
             </h3>
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item: any) => (
-                  <PostCard key={item} />
+               {recentPosts.map((post) => (
+                  <PostCard 
+                     key={post.id} 
+                     post={post}
+                  />
                ))}
             </div>
             <div className="flex items-center justify-center w-full mt-8">

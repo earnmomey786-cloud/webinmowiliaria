@@ -3,6 +3,7 @@ import PostOverlayCard from '@/components/molecules/card/PostOverlayCard'
 import PostCard from '@/components/molecules/card/PostCard'
 import PageInfo from '@/components/organism/pageInfo/PageInfo'
 import { generateSocialMeta } from '@/lib/social-meta'
+import { getPosts } from '@/lib/posts'
 import React from 'react'
 
 export const metadata = {
@@ -16,7 +17,10 @@ export const metadata = {
    })
 }
 
-const BlogListing = () => {
+const BlogListing = async () => {
+   // Cargar todos los posts desde Supabase
+   const posts = await getPosts()
+
    return (
       <main>
          <div className="container mx-auto">
@@ -33,15 +37,17 @@ const BlogListing = () => {
             {/* All posts component */}
             <section className="my-20">
                <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((item: any) => (
-                     <PostCard key={item} />
+                  {posts.map((post) => (
+                     <PostCard key={post.id} post={post} />
                   ))}
                </div>
-               <div className="flex items-center justify-center w-full mt-8">
-                  <button className="btn btn-outline btn-secondary font-work px-5 text-base font-medium">
-                     Load More
-                  </button>
-               </div>
+               {posts.length === 0 && (
+                  <div className="text-center py-12">
+                     <p className="text-base-content/60 text-lg">
+                        Brak artykułów do wyświetlenia.
+                     </p>
+                  </div>
+               )}
             </section>
 
             {/* Advertisement component */}
