@@ -1,0 +1,12 @@
+# ÚLTIMO UPDATE: 20 de septiembre 2025 - 20:30
+# Blog de Natalia Sikora en POLACO 🇵🇱
+# 
+# HTML traducido completamente:
+# ✅ Títulos en polaco
+# ✅ Navegación en polaco 
+# ✅ Artículos de Natalia Sikora
+# ✅ Metadatos SEO en polaco
+# ✅ Categorías en polaco
+#
+# Este archivo fuerza un nuevo deployment en Vercel
+DEPLOYMENT_TIMESTAMP=2025-09-20T20:30:00Z
