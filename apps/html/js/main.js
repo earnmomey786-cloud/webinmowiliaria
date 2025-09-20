@@ -69,19 +69,19 @@ document.getElementById('header').innerHTML = `
    <nav class="hidden xl:block col-span-6">
 	  <div class=" w-full flex items-center justify-center gap-10">
 		   <a href='../index.html' class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
-			  Home
+			  Strona Główna
 		   </a>
 		   <a href="../blog/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
 				Blog
 			</a>
 			<a href="../single-post/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
-				Single Post
+				Artykuł
 			</a>
 			<a href="../author/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
-				Author
+				Autorka
 			</a>
 			<a href="#" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
-			Contact
+			Kontakt
 			</a>
 	  </div>
    </nav>
@@ -92,7 +92,7 @@ document.getElementById('header').innerHTML = `
 		 <input
 			type="text"
 			class="outline-none text-base-content bg-base-200 w-28 placeholder:font-work"
-			placeholder="Search"
+			placeholder="Szukaj"
 		 />
 		 <div>
 			<svg
