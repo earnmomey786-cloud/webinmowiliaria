@@ -1,6 +1,4 @@
 import React from 'react'
-import { ArticleSchema } from '@/components/seo/StructuredData'
-import { generateBlogPostMeta } from '@/lib/social-meta'
 import { getPostBySlug, incrementPostViews } from '@/lib/posts'
 import { notFound } from 'next/navigation'
 
@@ -20,16 +18,15 @@ export async function generateMetadata({ params }: SinglePostProps) {
       }
    }
 
-   return generateBlogPostMeta({
+   return {
       title: post.meta_title || `${post.title} | MetaBlog`,
       description: post.meta_description || post.excerpt,
-      author: post.author.name,
-      publishedTime: post.created_at,
-      url: `https://yourdomainname.com/single-post/${post.slug}`,
-      tags: post.tags || [],
-      category: post.category.name,
-      image: post.image_url
-   })
+      openGraph: {
+         title: post.meta_title || post.title,
+         description: post.meta_description || post.excerpt,
+         images: post.image_url ? [post.image_url] : [],
+      }
+   }
 }
 
 const SinglePost = async ({ params }: SinglePostProps) => {
@@ -53,17 +50,7 @@ const SinglePost = async ({ params }: SinglePostProps) => {
    }
 
    return (
-      <>
-         <ArticleSchema
-            headline={post.title}
-            description={post.excerpt}
-            author={{ name: post.author.name, url: "https://yourdomainname.com/author" }}
-            datePublished={post.created_at.split('T')[0]}
-            url={`https://yourdomainname.com/single-post/${post.slug}`}
-            publisher={{ name: "MetaBlog" }}
-            image={post.image_url}
-         />
-         <main>
+      <main>
          <section>
             <div className="container mx-auto px-5 md:px-0 w-full md:w-10/12 lg:w-5/12 font-work">
                <div className="py-5">
@@ -120,7 +107,6 @@ const SinglePost = async ({ params }: SinglePostProps) => {
             </div>
          </section>
       </main>
-      </>
    )
 }
 
