@@ -7,10 +7,13 @@
       "packages/*"
    ],
    "scripts": {
-      "build": "turbo run build",
-      "dev": "turbo run dev",
+      "build": "cd apps/site && npm run build",
+      "dev": "cd apps/site && npm run dev",
+      "start": "cd apps/site && npm run start",
       "lint": "turbo run lint",
-      "format": "prettier --write . --ignore-path .prettierignore"
+      "format": "prettier --write . --ignore-path .prettierignore",
+      "turbo:build": "turbo run build",
+      "turbo:dev": "turbo run dev"
    },
    "devDependencies": {
       "eslint-config-custom": "workspace:*",

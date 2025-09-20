@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/site/package.json",
+      "use": "@vercel/next",
+      "config": {
+        "distDir": ".next"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/site/$1"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_GA_MEASUREMENT_ID": "G-XXXXXXXXXX",
+    "NEXT_PUBLIC_GOOGLE_ADSENSE_ID": "ca-pub-XXXXXXXXXXXXXXXX",
+    "NEXT_PUBLIC_SITE_URL": "https://metablog-polish.vercel.app",
+    "NEXT_PUBLIC_SITE_NAME": "MetaBlog Polski",
+    "NEXT_PUBLIC_SITE_DESCRIPTION": "Profesjonalny blog template w języku polskim z pełną optymalizacją SEO i monetyzacją"
+  }
+}
