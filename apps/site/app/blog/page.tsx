@@ -20,6 +20,7 @@ export const metadata = {
 const BlogListing = async () => {
    // Cargar todos los posts desde Supabase
    const posts = await getPosts()
+   const featuredPost = posts[0] // Usar el primer post como destacado
 
    return (
       <main>
@@ -31,7 +32,7 @@ const BlogListing = async () => {
 
             {/* Banner */}
             <section className="my-12">
-               <PostOverlayCard />
+               <PostOverlayCard post={featuredPost} />
             </section>
 
             {/* All posts component */}

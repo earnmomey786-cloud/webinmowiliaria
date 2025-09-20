@@ -20,6 +20,7 @@ export const metadata = {
 export default async function Home() {
    // Cargar posts recientes desde Supabase
    const recentPosts = await getRecentPosts(9)
+   const featuredPost = recentPosts[0] // El más reciente para el banner
 
    return (
       <>
@@ -38,7 +39,7 @@ export default async function Home() {
          <main className="container mx-auto">
          {/* Banner Component */}
          <section>
-            <BannerCard />
+            <BannerCard post={featuredPost} />
          </section>
 
          {/* Advertisement Component */}
