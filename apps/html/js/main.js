@@ -1,11 +1,16 @@
 /*
  *  Header Section added by JS
  */
+
+// Detect if we're in root or subdirectory
+const isInSubdirectory = window.location.pathname.includes('/blog/') || window.location.pathname.includes('/single-post/') || window.location.pathname.includes('/author/');
+const basePath = isInSubdirectory ? '../' : './';
+
 document.getElementById('header').innerHTML = `
 <div class="container mx-auto font-work">
   <div class="navbar grid grid-cols-12">
     <div class="col-span-3">
-	  <a href="../index.html">
+	  <a href="${basePath}index.html">
 		 <svg
 			  width="158"
 			  height="36"
@@ -68,16 +73,16 @@ document.getElementById('header').innerHTML = `
 	<!--	Navbar section	-->
    <nav class="hidden xl:block col-span-6">
 	  <div class=" w-full flex items-center justify-center gap-10">
-		   <a href='../index.html' class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
+		   <a href='${basePath}index.html' class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
 			  Strona Główna
 		   </a>
-		   <a href="../blog/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
+		   <a href="${basePath}blog/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
 				Blog
 			</a>
-			<a href="../single-post/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
+			<a href="${basePath}single-post/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
 				Artykuł
 			</a>
-			<a href="../author/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
+			<a href="${basePath}author/index.html" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
 				Autorka
 			</a>
 			<a href="#" class="link link-hover text-base text-base-content/80 hover:text-primary transition hover:duration-300">
@@ -212,11 +217,11 @@ document.getElementById('footer').innerHTML = `
                 <div>
                     <h5 class="text-base-content text-lg font-semibold font-sans">Quick Link</h5>
                     <div class="flex flex-col gap-y-2 mt-6">
-                        <a href="../" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Home</a>
+                        <a href="${basePath}" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Home</a>
                         <a href="#" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">About</a>
-                        <a href="../blog/index.html" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Blog</a>
-                        <a href="../" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Archived</a>
-                        <a href="../author/html" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Author</a>
+                        <a href="${basePath}blog/index.html" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Blog</a>
+                        <a href="${basePath}" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Archived</a>
+                        <a href="${basePath}author/index.html" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Author</a>
                         <a href="#" class="link link-hover text-base text-base-content/70 hover:text-primary transition hover:duration-300">Contact</a>
                     </div>
                 </div>
@@ -256,7 +261,7 @@ document.getElementById('footer').innerHTML = `
         </div>
         <div class="flex flex-col gap-4 md:gap-0 md:flex-row items-center justify-between py-8 bg-base-200 border-t border-base-content/10">
             <div class="flex items-center gap-2.5">
-                <a href="../">
+                <a href="${basePath}">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-base-content">
                         <path
                             d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 29.536 1.87437 34.6342 5.0231 38.6946L10.314 18.7066C12.5156 10.0312 18.2343 5.543 27.4155 5.543H30.5814C37.038 5.543 41.78 11.6041 40.2264 17.871C39.9478 18.995 39.427 20.0446 38.7004 20.9463L36.006 24.2898C35.3146 25.1478 35.0625 26.279 35.3239 27.3494L36.1453 30.7118C36.5704 32.4521 36.4927 34.2773 35.9213 35.9752C33.9775 41.751 28.5636 45.6413 22.4695 45.6413H13.6115C16.755 47.153 20.2786 48 24 48Z"
@@ -285,9 +290,9 @@ document.getElementById('footer').innerHTML = `
                 </div>
             </div>
             <div class="flex items-center gap-4 text-base-content/70">
-                <a href="../" class="text-base border-r border-base-content/10 pr-4 hover:text-primary transition hover:duration-300">Terms of Use</a>
-                <a href="../" class="text-base border-r border-base-content/10 pr-4 hover:text-primary transition hover:duration-300">Privacy Policy</a>
-                <a href="../" class="text-base hover:text-primary transition hover:duration-300">Cookie Policy</a>
+                <a href="${basePath}" class="text-base border-r border-base-content/10 pr-4 hover:text-primary transition hover:duration-300">Terms of Use</a>
+                <a href="${basePath}" class="text-base border-r border-base-content/10 pr-4 hover:text-primary transition hover:duration-300">Privacy Policy</a>
+                <a href="${basePath}" class="text-base hover:text-primary transition hover:duration-300">Cookie Policy</a>
             </div>
         </div>
     </div>
