@@ -13,14 +13,14 @@ const NewsLetter = () => {
       <div className="w-full">
          <div className="bg-base-100 py-8 px-9 rounded-xl">
             <p className="text-center text-xl font-semibold text-base-content">
-               Weekly Newsletter
+               Tygodniowy Newsletter
             </p>
             <p className="mt-2 text-base text-center text-base-content/60">
-               Get blog articles and offers via email
+               Otrzymuj artykuły z bloga i oferty na email
             </p>
             <div className="relative flex items-center mt-7">
                <input
-                  placeholder="Your Email"
+                  placeholder="Twój Email"
                   type="email"
                   className="px-4 py-3 border border-base-content/10 rounded-md w-full outline-none text-base-content placeholder:text-base bg-base-100 "
                />
@@ -47,7 +47,7 @@ const NewsLetter = () => {
                </svg>
             </div>
             <button className="btn btn-primary py-3 text-center font-medium w-full rounded-md mt-2 text-white text-base">
-               Subscribe
+               Subskrybuj
             </button>
          </div>
       </div>

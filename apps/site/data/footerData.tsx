@@ -1,10 +1,10 @@
 export const FooterDataOne = [
    {
-      name: 'Home',
+      name: 'Strona Główna',
       link: '/',
    },
    {
-      name: 'About',
+      name: 'O Nas',
       link: '#',
    },
    {
@@ -12,42 +12,42 @@ export const FooterDataOne = [
       link: '/blog',
    },
    {
-      name: 'Archived',
+      name: 'Archiwum',
       link: '#',
    },
    {
-      name: 'Author',
+      name: 'Autor',
       link: '/author',
    },
    {
-      name: 'Contact',
+      name: 'Kontakt',
       link: '#',
    },
 ]
 
 export const FooterDataTwo = [
    {
-      name: 'Life style',
+      name: 'Styl Życia',
       link: '#',
    },
    {
-      name: 'Technology',
+      name: 'Technologia',
       link: '#',
    },
    {
-      name: 'Travel',
+      name: 'Podróże',
       link: '#',
    },
    {
-      name: 'Business',
+      name: 'Biznes',
       link: '#',
    },
    {
-      name: 'Economy',
+      name: 'Ekonomia',
       link: '#',
    },
    {
-      name: 'Sports',
+      name: 'Sport',
       link: '#',
    },
 ]

@@ -9,13 +9,15 @@ import {
 import { GlobalProvider } from '@/context/store'
 import Header from '@/components/organism/header'
 import Footer from '@/components/organism/footer'
-import { Providers } from '@/utils/themeMode' // Plus Jakarta Sans font family with 4 weights and 2 styles
+import { Providers } from '@/utils/themeMode'
+import GoogleAnalytics from '@/components/analytics/GoogleAnalytics'
+import GoogleAdSense from '@/components/ads/GoogleAdSense'
 
 // Plus Jakarta Sans font family with 4 weights and 2 styles
 const Jakarta_Sans = Plus_Jakarta_Sans({
    weight: ['400', '500', '600', '700'],
    style: ['normal', 'italic'],
-   subsets: ['latin'],
+   subsets: ['latin', 'latin-ext'],
    display: 'swap',
    variable: '--font-plus-jakarta-sans',
 })
@@ -24,7 +26,7 @@ const Jakarta_Sans = Plus_Jakarta_Sans({
 const work_Sans = Work_Sans({
    weight: ['400', '500', '600', '700'],
    style: ['normal', 'italic'],
-   subsets: ['latin'],
+   subsets: ['latin', 'latin-ext'],
    display: 'swap',
    variable: '--font-work-sans',
 })
@@ -33,7 +35,7 @@ const work_Sans = Work_Sans({
 const source_Serif_Pro = Source_Serif_Pro({
    weight: ['200', '300', '400', '600', '700'],
    style: ['normal', 'italic'],
-   subsets: ['latin'],
+   subsets: ['latin', 'latin-ext'],
    display: 'swap',
    variable: '--font-source-serif-pro',
 })
@@ -45,11 +47,13 @@ export default function RootLayout({
 }) {
    return (
       <html
-         lang="en"
+         lang="pl"
          suppressHydrationWarning
          className={`${source_Serif_Pro.variable} ${Jakarta_Sans.variable} ${work_Sans.variable} font-sans`}
       >
          <body>
+            <GoogleAnalytics />
+            <GoogleAdSense />
             <Providers>
                <GlobalProvider>
                   <Header />

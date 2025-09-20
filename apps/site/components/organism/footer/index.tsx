@@ -22,32 +22,32 @@ const Footer = () => {
             <div className="grid grid-cols-12 gap-5 py-16">
                <div className="col-span-12 lg:col-span-3">
                   <h5 className="text-lg font-semibold text-base-content font-sans">
-                     About
+                     O Nas
                   </h5>
                   <p className="mt-3 text-base text-base-content/70 mb-6">
-                     Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                     sed do eiusmod tempor incididunt ut labore et dolore magna
-                     aliqua. Ut enim ad minim veniam
+                     Nasz blog to miejsce, gdzie dzielimy się najnowszymi 
+                     trendami technologicznymi, poradnikami programistycznymi 
+                     i inspirującymi historiami z branży IT.
                   </p>
                   <div>
                      <a
-                        href="mailto:info@jstemplate.net"
+                        href="mailto:kontakt@metablog.pl"
                         className="font-semibold text-base-content text-base"
                      >
                         Email :{' '}
                         <span className="text-base-content/70 font-normal hover:text-primary hover:duration-300 transition">
-                           info@jstemplate.net
+                           kontakt@metablog.pl
                         </span>
                      </a>
                   </div>
                   <div className="mt-1">
                      <a
-                        href="tel:880123456789"
+                        href="tel:+48123456789"
                         className="font-semibold text-base-content text-base"
                      >
-                        Phone :{' '}
+                        Telefon :{' '}
                         <span className="text-base-content/70 font-normal hover:text-primary hover:duration-300 transition">
-                           880 123 456 789
+                           +48 123 456 789
                         </span>
                      </a>
                   </div>
@@ -55,7 +55,7 @@ const Footer = () => {
                <div className="flex justify-between lg:justify-center lg:gap-20 col-span-12 lg:col-span-5">
                   <div>
                      <h5 className="text-base-content text-lg font-semibold font-sans">
-                        Quick Link
+                        Szybkie Linki
                      </h5>
                      <div className="flex flex-col gap-y-2 mt-6">
                         {FooterDataOne.map((item: any, index: number) => (
@@ -72,7 +72,7 @@ const Footer = () => {
                   </div>
                   <div>
                      <h5 className="text-base-content text-lg font-semibold font-sans">
-                        Category
+                        Kategorie
                      </h5>
                      <div className="flex flex-col gap-y-2 mt-6">
                         {FooterDataTwo.map((item: any, index: number) => (

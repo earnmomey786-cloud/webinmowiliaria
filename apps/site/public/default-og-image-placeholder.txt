@@ -1,0 +1,10 @@
+<!-- This is a placeholder for the Open Graph default image -->
+<!-- You should replace this with an actual image file (1200x630px recommended) -->
+<!-- For now, this serves as a reference for where the default OG image should be placed -->
+
+MetaBlog - Default Open Graph Image
+Recommended size: 1200x630 pixels
+Location: /apps/site/public/default-og-image.jpg
+
+This file should contain your blog's logo, title, and branding
+for social media sharing when no specific image is provided.

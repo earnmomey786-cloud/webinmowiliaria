@@ -46,7 +46,7 @@ const Header = () => {
                      <input
                         type="text"
                         className="outline-none text-base-content bg-base-200 w-28 placeholder:font-work"
-                        placeholder="Search"
+                        placeholder="Szukaj"
                      />
                      <div>
                         <svg

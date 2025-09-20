@@ -1,6 +1,6 @@
 export const headerData = [
    {
-      name: 'Home',
+      name: 'Strona Główna',
       link: '/',
    },
    {
@@ -8,15 +8,15 @@ export const headerData = [
       link: '/blog',
    },
    {
-      name: 'Single Post',
+      name: 'Artykuł',
       link: '/single-post',
    },
    {
-      name: 'Author',
+      name: 'Autor',
       link: '/author',
    },
    {
-      name: 'Contact',
+      name: 'Kontakt',
       link: '#',
    },
 ]
