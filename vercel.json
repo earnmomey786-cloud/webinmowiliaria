@@ -2,17 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "apps/site/package.json",
-      "use": "@vercel/next",
-      "config": {
-        "distDir": ".next"
-      }
+      "src": "apps/html/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "apps/site/$1"
+      "dest": "apps/html/$1"
     }
   ],
   "env": {
