@@ -2,19 +2,41 @@
   "version": 2,
   "builds": [
     {
-      "src": "apps/html/**",
+      "src": "apps/html/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "apps/html/blog/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "apps/html/jak-zostac-programista-2025/index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "apps/html/author/index.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
+      "src": "/blog/(.*)",
+      "dest": "/apps/html/blog/$1"
+    },
+    {
+      "src": "/jak-zostac-programista-2025/(.*)",
+      "dest": "/apps/html/jak-zostac-programista-2025/$1"
+    },
+    {
+      "src": "/author/(.*)",
+      "dest": "/apps/html/author/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "apps/html/$1"
+      "dest": "/apps/html/$1"
     }
   ],
   "env": {
-    "NEXT_PUBLIC_GA_MEASUREMENT_ID": "G-XXXXXXXXXX",
-    "NEXT_PUBLIC_GOOGLE_ADSENSE_ID": "ca-pub-XXXXXXXXXXXXXXXX",
     "NEXT_PUBLIC_SITE_URL": "https://metablog-free.vercel.app",
     "NEXT_PUBLIC_SITE_NAME": "MetaBlog Polski - Natalia Sikora",
     "NEXT_PUBLIC_SITE_DESCRIPTION": "Profesjonalny blog template w języku polskim z pełną optymalizacją SEO i monetyzacją. Blog Natalii Sikory o technologii i AI.",
