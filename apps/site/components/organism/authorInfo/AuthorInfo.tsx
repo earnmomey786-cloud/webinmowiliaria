@@ -33,10 +33,10 @@ const AuthorInfo = () => {
             </div>
          </div>
          <p className="text-sm sm:text-lg text-base-content/70 text-center py-6 max-w-2xl w-full mx-auto">
-            Meet Jonathan Doe, a passionate writer and blogger with a love for
-            technology and travel. Jonathan holds a degree in Computer Science
-            and has spent years working in the tech industry, gaining a deep
-            understanding of the impact technology has on our lives.
+            Poznaj Jakuba Wiśniewskiego, pasjonata pisania i blogowania z zamiłowaniem do
+            technologii i podróży. Jakub posiada tytuł magistra Informatyki
+            i spędził lata pracując w branży technologicznej, zdobywając głębokie
+            zrozumienie wpływu technologii na nasze życie.
          </p>
          <div className="flex items-center justify-center gap-2">
             {socialShare?.map((item, index) => (

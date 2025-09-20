@@ -23,15 +23,15 @@ const PostOverlayCard = () => {
          </figure>
          <div className="card-body p-2 md:p-10 absolute bottom-0 w-full md:w-8/12 z-20">
             <div className="w-fit text-white px-2.5 py-1 bg-primary text-xs md:text-sm rounded-md mb-2 md:mb-4 font-medium">
-               Technology
+               Technologia
             </div>
             <h3>
                <a
                   href="/"
                   className="text-neutral-content font-semibold text-xl md:text-2xl lg:text-4xl leading-5 md:leading-10 hover:text-primary transition hover:duration-500"
                >
-                  The Impact of Technology on the Workplace: How Technology is
-                  Changing
+                  Wpływ Technologii na Miejsce Pracy: Jak Technologia
+                  Zmienia Nasze Życie
                </a>
             </h3>
             <div className="mt-3 md:mt-6 flex items-center gap-5 text-neutral-content">

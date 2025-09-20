@@ -22,12 +22,12 @@ const PageInfo = () => {
                      href={`/`}
                      className="hover:text-primary transition hover:duration-300 font-medium text-base"
                   >
-                     Home
+                     Strona Główna
                   </Link>
                </li>
                <li>
                   <span className="text-base-content/60 font-normal text-base">
-                     Link One
+                     Aktualny Artykuł
                   </span>
                </li>
             </ul>

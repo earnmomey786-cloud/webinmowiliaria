@@ -29,11 +29,11 @@ const SinglePost = () => {
             <div className="container mx-auto px-5 md:px-0 w-full md:w-10/12 lg:w-5/12 font-work">
                <div className="py-5">
                   <div className="w-fit text-white px-2.5 py-1 bg-primary text-xs md:text-sm rounded-md mb-2 md:mb-4 font-medium">
-                     Technology
+                     Technologia
                   </div>
                   <h3 className="text-base-content font-semibold text-xl md:text-2xl lg:text-4xl leading-5 md:leading-10 ">
-                     The Impact of Technology on the Workplace: How Technology
-                     is Changing
+                     Wpływ Technologii na Miejsce Pracy: Jak Technologia
+                     Zmienia Naszą Codzienność
                   </h3>
                   <div className="mt-3 md:mt-6 flex items-center gap-5 text-base-content/60">
                      <div className=" flex items-center gap-3">
@@ -69,15 +69,15 @@ const SinglePost = () => {
                <div className="font-serif">
                   <div className="mt-8">
                      <p className="text-xl leading-8 text-base-content/80">
-                        Traveling is an enriching experience that opens up new
-                        horizons, exposes us to different cultures, and creates
-                        memories that last a lifetime. However, traveling can
-                        also be stressful and overwhelming, especially if you
-                        dont plan and prepare adequately. In this blog article,
-                        well explore tips and tricks for a memorable journey and
-                        how to make the most of your travels. <br /> <br /> One
-                        of the most rewarding aspects of traveling is immersing
-                        yourself in the local culture and customs. This includes
+                        Podróżowanie to wzbogacające doświadczenie, które otwiera nowe
+                        horyzonty, wystawia nas na różne kultury i tworzy
+                        wspomnienia, które pozostają na całe życie. Jednak podróżowanie może
+                        być także stresujące i przytłaczające, szczególnie jeśli nie
+                        planujesz i nie przygotowujesz się odpowiednio. W tym artykule,
+                        poznamy porady i triki dla niezapomnianej podróży oraz
+                        jak maksymalnie wykorzystać swoje podróże. <br /> <br /> Jednym
+                        z najbardziej satysfakcjonujących aspektów podróżowania jest zanurzenie się
+                        w lokalnej kulturze i zwyczajach. Obejmuje to
                         trying local cuisine, attending cultural events and
                         festivals, and interacting with locals. Learning a few
                         phrases in the local language can also go a long way in
